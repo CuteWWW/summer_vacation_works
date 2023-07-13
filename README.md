@@ -11,3 +11,4 @@
 ### 结果
 生日攻击虽然降低了攻击方法（相对于穷举）的时间复杂度，但是个概率算法，有可能很快也有可能很慢才得到一对碰撞。经过很多次尝试之后，终于得到了一次较短时间的攻击结果。
 本次实验的Iv是8*4*8=256bits
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/1.png)
