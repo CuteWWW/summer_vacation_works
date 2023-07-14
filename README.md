@@ -27,8 +27,11 @@
 针对sm3,sha256的长度扩展攻击，我们可以先对初始明文加密，并利用此密文作为初始向量对扩展明文进行加密，最终得到我们想要的扩展明文加密的密文，将这个密文与（plaintext||padding||extension）加密后的结果进行比较，如果相等，则攻击成功。(注意，由于本.c文件的要求，其sm3加密时对消息的填充不是自动的，第一步对初始明文加密时要先手动填充成plaintext||padding再使用迭代函数，后面也没再填充，也就是说将pad单独拿出来后,**实际上比较的是hash(plaintext||padding||ext,iv） == hash(ext,hash(plaintext||padding,iv))**
 
 ### 结果
-一.hash(plaintext||padding||ext,iv） == hash(ext,hash(plaintext||padding,iv))
-二.hash(plaintext||padding1||ext||padding3,iv） == hash(ext||padding2,hash(plaintext||padding,iv))  padding 1对应plaintext,2对应ext,3对应plaintext||padding1||ext
+一.  **验证**  hash(plaintext||padding||ext,iv） == hash(ext,hash(plaintext||padding,iv))
 
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project3/3.1.png)
 
+二.  **验证**  hash(plaintext||padding1||ext||padding3,iv） != hash(ext||padding2,hash(plaintext||padding,iv))  padding 1对应plaintext,2对应ext,3对应plaintext||padding1||ext
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project3/3.2.png)
 
