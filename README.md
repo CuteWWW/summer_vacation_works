@@ -49,6 +49,8 @@ merkle tree 由ralph merkle提出，本质上是用于数据的完整性校验�
 
 我们首先实现一个二维数组，目的是为了存储一个二维的merkle tree,一个维度存储层数，一个维度存储每层的节点。
 
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_5/5_3.png)
+
 接着我们将数据拆开分别hash,并放入初始叶子节点。然后将他们两两合并hash，向上存入父节点，如果落单直接向上存储，不需要二次hash，重复步骤，直到只剩一个节点为止。
 
 ### 结果
