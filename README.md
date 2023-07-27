@@ -58,5 +58,28 @@ merkle tree 由ralph merkle提出，本质上是用于数据的完整性校验�
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_5/5_4.png)
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_5/5_5.png)
 
+## project6
 
+### 原理
 
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_1.png)
+
+本实验的本质是构建一个交互式的零知识证明协议。
+首先Alice随机生成一个128bit的大整数记作s,计算其k=2100-1978次hash（sha256)计算并记录第22次hash结果（记作p)与最后的第128次hash结果（记作c),将（p,c)传给Bob。
+Bob接收到(p,c)后，将p进行k'=2100-2000次hash(sha256)计算，并记录最后结果为c',比较c与c'是否一致，如果一致，则证明Alice的确年龄大于21岁，且Bob没有得到任何有关Alice具体多少岁的有关信息。
+
+本实验主要通过socket套接字实现交互功能。借用CDSN上的解释，Socket是指套接字，是对网络中不同主机上的应用进程之间进行双向通信的端点的一种抽象。一个套接字就是网络上进程通信的一端，提供了应用层进程利用网络协议交换数据的机制。
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_2.png)
+
+### 实现
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_3.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_4.png)
+
+让Alice担任服务器端，创建socket，设置ip  port,进行监听，准备工作中，使用randint指定成128bit长随机整数，然后计算c与p。当与Bob连接后，发送helloBob与Bob打招呼，Bob接收到招呼后发送想要p,c的请求，Alice逐一发送p,c,然后计算c',并与c进行比较，如果一致，则发送验证成功的消息，然后双方均关闭连接，完成协议。
+
+### 结果
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_5.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_6.png)
