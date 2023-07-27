@@ -83,3 +83,34 @@ Bob接收到(p,c)后，将p进行k'=2100-2000次hash(sha256)计算，并记录�
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_5.png)
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_6/6_6.png)
+
+## project9
+
+### 原理
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_2.png)
+
+因为DES的加密密钥空间太小容易被攻破，而三重DES又可以被中间相遇攻击所克制，所以，AES是现在流行使用的高级对称加密算法。AES采用分组密码的工作模式，每128bit为一组进行加密，而密钥也是128bit的，在加密过程中，使用了扩散与混淆的手法，包括轮密钥加、字节替换、行变换、列混淆等，并且一般要进行10轮加密函数（当然，如果密钥长度不同，加密轮数也不同），充分使得加密过程更加安全可靠，减小了攻击者破解AES算法的可能性。下面将具体分析AES的代码实现。
+
+### 实现
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_4.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_5.png)
+
+首先是密钥扩展函数，我们将128bit的原始密钥输入函数，函数自动将其拆分进4*4的单位为字节的矩阵，然后通过公式迭代推导下一轮的密钥，一共可以得到11个128bit密钥，除了一个初始密钥，剩下的按顺序为第一轮、第二轮......的轮密钥。然后将密钥倒序赋值给另一个数组，得到加密轮密钥。接着，是轮密钥加函数，将对应部分的密钥与明文进行异或即可。
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_6.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_3.png)
+
+接着是字节替换，我们通过对应位置字节（前四位对应S盒行值，后四位对应S盒列值）找到相应的S盒数据进行替换。
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_7.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_8.png)
+
+最后是行变换和列混淆，列混淆使用矩阵右乘，且为异或相乘。
+
+通过加密函数将明文按照128bit进行分割，按照ECB的工作模式进行加密。解密过程则是使用上述过程的逆过程与逆函数实现。
+
+### 结果
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_1.png)
