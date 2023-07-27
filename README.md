@@ -92,6 +92,11 @@ Bob接收到(p,c)后，将p进行k'=2100-2000次hash(sha256)计算，并记录�
 
 因为DES的加密密钥空间太小容易被攻破，而三重DES又可以被中间相遇攻击所克制，所以，AES是现在流行使用的高级对称加密算法。AES采用分组密码的工作模式，每128bit为一组进行加密，而密钥也是128bit的，在加密过程中，使用了扩散与混淆的手法，包括轮密钥加、字节替换、行变换、列混淆等，并且一般要进行10轮加密函数（当然，如果密钥长度不同，加密轮数也不同），充分使得加密过程更加安全可靠，减小了攻击者破解AES算法的可能性。下面将具体分析AES的代码实现。
 
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_9.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_17.png)
+
+SM4是国密算法中的对称加密函数，同样使用128bit的分组与密钥长度，但是轮密钥长度仅有32bit，并且总的加密轮数也达到了32轮。
+
 ### 实现
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_4.png)
@@ -111,6 +116,22 @@ Bob接收到(p,c)后，将p进行k'=2100-2000次hash(sha256)计算，并记录�
 
 通过加密函数将明文按照128bit进行分割，按照ECB的工作模式进行加密。解密过程则是使用上述过程的逆过程与逆函数实现。
 
-### 结果
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_10.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_11.png)
 
+以上是s盒，fk,ck的构成。
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_12.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_13.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_14.png)
+这是T函数 T'函数 RK函数。
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_15.png)
+
+加密过程如图
+
+### 结果
+AES
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_1.png)
+SM4
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_16.png)
