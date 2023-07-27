@@ -135,3 +135,15 @@ AES
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_1.png)
 SM4
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_16.png)
+
+## project11
+
+## 原理
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_2.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_3.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_4.png)
+
+sm2是国产基于椭圆曲线的签名算法。
+其基础参数一般如下：
+
