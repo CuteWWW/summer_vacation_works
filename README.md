@@ -138,7 +138,7 @@ SM4
 
 ## project11
 
-## 原理
+### 原理
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_2.png)
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_3.png)
@@ -158,5 +158,17 @@ sm2是国产基于椭圆曲线的签名算法。
 
 参考文献：https://blog.csdn.net/u013137970/article/details/84573200
 
-## 结果
+### 结果
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_1.png)
+
+## project17
+
+**存储方式** Firefox使用的是“登录管理器”来存储和管理用户的密码信息，而谷歌使用的是“密码管理器”。这两种存储方式在数据结构和加密算法上可能会有所不同。
+
+**自动填充** Firefox的记住密码功能可以自动填充登录表单，用户只需点击用户名输入框，浏览器会自动弹出已保存的用户名列表供选择。而谷歌浏览器在输入用户名时会自动匹配已保存的用户名，并在用户名输入框下方显示下拉列表，用户可以选择其中的用户名进行自动填充。
+
+**同步功能** 谷歌浏览器的记住密码功能可以通过用户的Google账号进行同步，使得在不同设备上使用同一个账号登录时能够自动填充密码。而Firefox则需要通过Firefox账号进行同步，但同步功能的实现可能会有一些差异。
+
+**安全性** Firefox和谷歌浏览器在密码存储和加密方面都有一定的安全措施，但具体实现可能会有所不同。谷歌浏览器的密码管理器支持使用主密码进行加密，而Firefox的登录管理器也有一些安全措施来保护用户的密码信息。
+
+总体来说，Firefox和谷歌浏览器的记住密码插件在实现上有一些细微的差别，包括存储方式、自动填充、同步功能和安全性等方面。用户可以根据自己的需求和偏好选择适合自己的浏览器和插件。
