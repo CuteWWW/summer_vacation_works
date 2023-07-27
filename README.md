@@ -146,4 +146,17 @@ SM4
 
 sm2是国产基于椭圆曲线的签名算法。
 其基础参数一般如下：
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_5.png)
 
+然后是其他步骤
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_5.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_6.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_7.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_8.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_9.png)
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_10.png)
+
+参考文献：https://blog.csdn.net/u013137970/article/details/84573200
+
+## 结果
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_1.png)
