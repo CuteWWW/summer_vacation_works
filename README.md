@@ -90,7 +90,7 @@ Bob接收到(p,c)后，将p进行k'=2100-2000次hash(sha256)计算，并记录�
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_2.png)
 
-因为DES的加密密钥空间太小容易被攻破，而三重DES又可以被中间相遇攻击所克制，所以，AES是现在流行使用的高级对称加密算法。AES采用分组密码的工作模式，每128bit为一组进行加密，而密钥也是128bit的，在加密过程中，使用了扩散与混淆的手法，包括轮密钥加、字节替换、行变换、列混淆等，并且一般要进行10轮加密函数（当然，如果密钥长度不同，加密轮数也不同），充分使得加密过程更加安全可靠，减小了攻击者破解AES算法的可能性。下面将具体分析AES的代码实现。
+因为DES的加密密钥空间太小容易被攻破，而三重DES又可以被中间相遇攻击所克制，所以，AES是现在流行使用的高级对称加密算法。AES采用分组密码的工作模式，每128bit为一组进行加密，而密钥也是128bit的，在加密过程中，使用了扩散与混淆的手法，包括轮密钥加、字节替换、行变换、列混淆等，并且一般要进行10轮加密函数（当然，如果密钥长度不同，加密轮数也不同），充分使得加密过程更加安全可靠，减小了攻击者破解AES算法的可能性。
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_9.png)
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_9/9_17.png)
