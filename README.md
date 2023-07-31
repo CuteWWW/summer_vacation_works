@@ -165,6 +165,17 @@ sm2是国产基于椭圆曲线的签名算法。
 ### 结果
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_11/11_1.png)
 
+## project14
+
+### 原理
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_14/14_2.png)
+
+Pretty Good Privacy（PGP）是一个加密程序，为数据通信提供加密隐私和身份验证。PGP 用于对文本、电子邮件、文件、目录和整个磁盘分区进行签名、加密和解密，并提高电子邮件通信的安全性。PGP加密使用散列，数据压缩，对称密钥加密，最后是公钥加密的串行组合。其中最关键的是两种形式的加密的组合：对称密钥加密(Symmetric Cryptography)和非对称密钥加密(Asymmetric cryptography)。在实现PGP加密的过程中，首先使用对称密钥加密算法对原始数据进行加密。对称密钥加密算法包括DES、AES、Blowfish等，这些算法能够快速地加密和解密数据，但是需要发送方和接收方之间共享密钥。为了避免在网络上传输密钥，PGP使用了公钥加密算法。公钥加密算法是一种使用不同的密钥加密和解密的算法，其中公钥用于加密，而私钥用于解密。公钥加密算法包括RSA、DSA等，这些算法具有极高的安全性，但是加密和解密速度比对称密钥加密算法慢得多。PGP将对称密钥加密，并使用接收方的公钥进行加密。这种方式可以保证密钥的安全性，同时可以确保只有接收方可以解密对称密钥，从而保护了数据的机密性。接收方使用自己的私钥对加密的对称密钥进行解密，然后使用对称密钥对数据进行解密。这种方式既可以保护数据的安全性，也可以提高加解密的速度。
+
+### 结果
+
+![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project_14/14_1.png)
+
 ## project17
 
 **存储方式** Firefox使用的是“登录管理器”来存储和管理用户的密码信息，而谷歌使用的是“密码管理器”。这两种存储方式在数据结构和加密算法上可能会有所不同。
