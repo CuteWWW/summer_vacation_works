@@ -2,7 +2,7 @@
 
 **所有的实验报告均在此**
 
-**目前已经完成project 1,2,3,5,6,9,11,17**
+**目前已经完成project 1,2,3,4,5,6,9,11,14,17**
 
 ## project1
 
@@ -38,6 +38,10 @@
 二.  **验证**  hash(plaintext||padding1||ext||padding3,iv） != hash(ext||padding2,hash(plaintext||padding,iv))  padding 1对应plaintext,2对应ext,3对应plaintext||padding1||ext
 
 ![image](https://github.com/CuteWWW/summer_vacation_works/blob/main/project3/3.2.png)
+
+## project4
+
+提高sm3加密时内部计算的并行性。
 
 ## project5
 
